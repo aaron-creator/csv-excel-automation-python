@@ -12,6 +12,10 @@ CORS(app)
 # Load CSV file (ensure it's in the same folder as app.py)
 CSV_FILE = "sales_data.csv"
 
+PORT = int(os.getenv("PORT", 5000))  # Default to 5000
+SECRET_KEY = os.getenv("SECRET_KEY", "aaron-secret")
+
+app.config["SECRET_KEY"] = SECRET_KEY
 #define a route for homepage
 @app.route('/filter', methods=['POST'])
 def filter_sales():
