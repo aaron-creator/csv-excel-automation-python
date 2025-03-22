@@ -9,7 +9,7 @@ function App() {
 
   const handleFilter = async () => {
     try {
-      const response = await axios.post("http://127.0.0.1:5000/filter", {
+      const response = await axios.post("https://sales-data-filter-app.onrender.com:5000/filter", {
         start_date: startDate,
         end_date: endDate,
       }, { responseType: "blob" });
