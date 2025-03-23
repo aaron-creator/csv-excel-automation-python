@@ -29,9 +29,8 @@ function App() {
   return (
     <>
       <div className="@container">
-        <h1>CSV Excel Automation App</h1>
-        <div className="">
-            <h2>Sales Data Filter</h2>
+        <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+            <h2 className="text-xl font-bold mb-4">Sales Data Filter</h2>
 
             <label>Start Date:</label>
             <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
@@ -39,8 +38,11 @@ function App() {
             <label>End Date:</label>
             <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
             <br />
-            <button className="button" onClick={handleFilter}>Download Excel Report</button>
-            {error && <p style={{ color: "red" }}>{error}</p>}
+
+            <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
+                onClick={handleFilter}>
+                Download Excel Report
+            </button>
         </div>
       </div>
     </>
