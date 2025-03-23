@@ -38,12 +38,9 @@ function App() {
             <label>End Date:</label>
             <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
             <br />
+            <button className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600" onClick={handleFilter}>Download Excel Report</button>
+            {error && <p style={{ color: "red" }}>{error}</p>}
 
-            <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
-                onClick={handleFilter} // Replace with actual download function
-              >
-                Download Excel Report
-            </button>
         </div>
       </div>
     </>
