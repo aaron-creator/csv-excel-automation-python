@@ -40,7 +40,8 @@ function App() {
             <br />
 
             <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
-                onClick={handleFilter}>
+                onClick={handleFilter} // Replace with actual download function
+              >
                 Download Excel Report
             </button>
         </div>
