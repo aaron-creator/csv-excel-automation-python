@@ -13,7 +13,7 @@ CORS(app)
 CSV_FILE = "sales_data.csv"
 
 PORT = int(os.getenv("PORT", 5000))  # Default to 5000
-SECRET_KEY = os.getenv("SECRET_KEY", "aaron-secret")
+SECRET_KEY = os.getenv("SECRET_KEY", "55f8cd7ef438f22e20295220419a9a3d81136194e3e88c92")
 
 app.config["SECRET_KEY"] = SECRET_KEY
 #define a route for homepage
