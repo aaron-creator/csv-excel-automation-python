@@ -8,23 +8,32 @@ function App() {
   const [error, setError] = useState("");
 
   const handleFilter = async () => {
+    if (!startDate || !endDate) {
+        setError("Please select both start and end dates.");
+        return;
+    }
+
     try {
-      const response = await axios.post("https://csv-excel-automation-python.onrender.com/filter", {
+      const response = await axios.post("http://127.0.0.1:5000/filter", {
         start_date: startDate,
         end_date: endDate,
       }, { responseType: "blob" });
 
-      // Create a link to download the file
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement("a");
       link.href = url;
       link.setAttribute("download", "filtered_sales_report.xlsx");
       document.body.appendChild(link);
       link.click();
+
+      // Clean up
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
     } catch (err) {
       setError("Error generating the report. Try again.");
     }
-  };
+};
+
 
   return (
     <>
@@ -38,7 +47,13 @@ function App() {
             <label>End Date:</label>
             <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
             <br />
-            <button className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600" onClick={handleFilter}>Download Excel Report</button>
+            <button
+              className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600"
+              onClick={handleFilter} // Remove the arrow function and directly call handleFilter
+            >
+              Download Excel Report
+            </button>
+
             {error && <p style={{ color: "red" }}>{error}</p>}
 
         </div>
