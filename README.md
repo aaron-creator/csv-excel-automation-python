@@ -1,11 +1,11 @@
 # Sales Data Filtering App
 
 ## 📌 Project Overview
+This application allows users to filter sales data based on a date range and download the results as an Excel report. It consists of a React frontend and a Flask backend for seamless interaction.
 
-This application allows users to filter sales data based on a date range and download the results as an Excel report. It consists of a **React frontend** and a **Flask backend** for seamless interaction.
+---
 
 ## 🛠 Tech Stack
-
 - **Frontend**: React.js, Vite, Tailwind CSS
 - **Backend**: Flask, Pandas
 - **Database/Storage**: CSV Files
@@ -14,7 +14,6 @@ This application allows users to filter sales data based on a date range and dow
 ---
 
 ## 🚀 Features
-
 - Upload and filter sales data
 - Generate an Excel report
 - Simple and user-friendly UI
@@ -25,13 +24,12 @@ This application allows users to filter sales data based on a date range and dow
 ## 📦 Installation
 
 ### **Backend Setup (Flask)**
-
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/sales-filter-app.git
    cd sales-filter-app/backend
    ```
-2. **Create a virtual environment** (Optional but recommended)
+2. **Create a virtual environment (Optional but recommended)**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
@@ -49,7 +47,6 @@ This application allows users to filter sales data based on a date range and dow
 ---
 
 ### **Frontend Setup (React)**
-
 1. **Navigate to the frontend folder**
    ```bash
    cd ../frontend
@@ -67,9 +64,7 @@ This application allows users to filter sales data based on a date range and dow
 ---
 
 ## 🔗 API Endpoints
-
-### `POST /filter_sales`
-
+### **POST /filter_sales**
 - **Description**: Filters sales data based on the provided date range and returns an Excel file.
 - **Request Format (JSON)**:
   ```json
@@ -83,18 +78,14 @@ This application allows users to filter sales data based on a date range and dow
 ---
 
 ## 🖥️ UI Screenshots
-
 (Add images of your UI using Markdown)
 
-```md
 ![Home Page](screenshots/home.png)
 ![Filter Form](screenshots/filter.png)
-```
 
 ---
 
 ## ⚡ Future Improvements
-
 - Add user authentication
 - Support for multiple file formats (CSV, JSON)
 - Cloud storage integration
@@ -102,15 +93,14 @@ This application allows users to filter sales data based on a date range and dow
 ---
 
 ## 🤝 Contributing
-
 Feel free to create a pull request or open an issue.
 
 ---
 
 ## 📜 License
+This project is licensed under the **MIT License**.
 
-This project is licensed under the MIT License.
+---
 
-
-
+### 🎉 Happy Coding! 🚀
 
