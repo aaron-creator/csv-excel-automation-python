@@ -42,6 +42,7 @@ def filter_sales():
         # Filter by date
         filtered_df = df[(df["Date"] >= start_date) & (df["Date"] <= end_date)]
         print(f"✅ Filtered DataFrame: {filtered_df.shape[0]} rows")
+        filtered_df["Total Sales"] = filtered_df["Quantity"] * filtered_df["Price"]
 
         if filtered_df.empty:
             print("❌ No matching data found")
